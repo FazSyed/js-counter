@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER _ JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <h1 class="js-number">0</h1>
+    <div class="buttons">
+        <button class="js-button-minus">decrease</button>
+        <button class="js-button-reset">reset</button>
+        <button class="js-button-plus">increase</button>
+    </div>
+
+    <script>
+
+        let num = 0;
+        let value = document.querySelector(".js-number");
+
+        document.querySelector(".js-button-minus").onclick = () => {
+            num -= 1;
+            value.innerHTML = num;
+            value.style.color = "red"
+        };
+
+        document.querySelector(".js-button-reset").onclick = () => {
+            num = 0;
+            value.innerHTML = num;
+            value.style.color = "black"
+        };
+
+        document.querySelector(".js-button-plus").onclick = () => {
+            num += 1;
+            value.innerHTML = num;
+            value.style.color = "green"
+        };
+
+    </script>
+</body>
+
+</html>
